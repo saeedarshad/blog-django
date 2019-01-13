@@ -1,0 +1,12 @@
+
+
+{% extends 'blog/base.html' %}
+   {% block content %}
+    {% if post.published_date %}
+        <p style='text-align:center'>published: {{post.published_date}}</p>
+    {% endif %}    
+        <h1 style='text-align:center'><a href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a></h1>
+        <p style='margin-top:25px;text-align:center'>{{post.text | linebreaksbr }}</p>
+    
+   {% endblock %}
+
