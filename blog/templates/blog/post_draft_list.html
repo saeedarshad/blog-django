@@ -2,11 +2,11 @@
 
 {% extends 'blog/base.html' %}
    {% block content %}
+   <h1>Drafts</h1>
     {% for post in posts %}
-        <p>published: {{post.published_date}}</p>
+        <p>created: {{post.created_date}}</p>
         <h2><a href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a></h2>
         <p>{{post.text  }}</p>
-        <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.comments.count }}</a>
     {% endfor%}
    {% endblock %}
 

@@ -49,6 +49,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'djangogirls.urls'
+LOGIN_REDIRECT_URL = '/'
 
 TEMPLATES = [
     {
